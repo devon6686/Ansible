@@ -2,6 +2,7 @@
 - name: ssh key authorization
   hosts: node
   remote_user: root
+  gather_facts: no
 
   tasks:
   - name: authorized_keys
