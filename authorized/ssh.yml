@@ -1,0 +1,11 @@
+---
+- name: ssh key authorization
+  hosts: node
+  remote_user: root
+
+  tasks:
+  - name: authorized_keys
+    blockinfile: path=/root/.ssh/authorized_keys mode=0644 owner=root group=root block="ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDH2rZjZwYAd1XwRJ9aUxoAHc15AcRQk4ocCiX9utDVznnhg2gdZBUaH4loOfeXHlHd0T7R5wcWc9ySaZiQO6QiE7QIWSFXlTZskpg4fWb0lrKo1f6zJrP7E73sj55r3XgsUUZFU5ItWwJid/e9rfTGqubLKsplwdINfgGcFoJrdRPA/N+k+an6W455Gjti1T2QvmiajDxR+jIB93IyJGwDGcruEabBFFdqOfOG2NI/C7ieaNWjwMtOT4o2tm5+4+lRR6mRE2pfPa0AdWpHmfNejt3siYhL3HoOaBB+yXW7gc86t09P8/QTljFghWqV7ghuP3Fq3a7iqlHRBsp8b12r root@node-1"
+
+  - name: validate
+    command: date
