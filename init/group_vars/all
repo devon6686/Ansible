@@ -1,0 +1,9 @@
+---
+sys_users:
+  - devon
+  - curry
+
+ntp: 
+  aliyun: ntp.aliyun.com
+  tencent: time1.cloud.tencent.com
+

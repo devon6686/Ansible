@@ -1,0 +1,8 @@
+---
+- name: sys init
+  hosts: web
+#  remote_user: root
+  gather_facts: no
+
+  roles:
+    - common

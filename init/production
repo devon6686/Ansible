@@ -1,0 +1,17 @@
+# production
+[shanghai-web]
+10.0.0.12 ansible_ssh_user=root ansible_ssh_port=22 ansible_ssh_pass=redat
+
+[beijing-web]
+10.0.0.13 ansible_ssh_user=root ansible_ssh_port=22 ansible_ssh_pass=redat
+
+[shanghai-db]
+10.0.0.13 ansible_ssh_user=root ansible_ssh_port=22 ansible_ssh_pass=redat
+
+[shanghai:children]
+shanghai-web
+shanghai-db
+
+[web:children]
+shanghai-web
+beijing-web
